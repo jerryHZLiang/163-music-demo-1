@@ -16,7 +16,11 @@
               $el.find('ul').append(domLi)
             })
             },
-          
+          activeItem(li){
+            let $li = $(li)
+            $li.addClass('active')
+            .siblings('.active').removeClass('active')
+          },
           clearActive() {
             $(this.el).find('.active').removeClass('active')
           }
@@ -43,14 +47,26 @@
             this.view = view
             this.model = model
             this.view.render(this.model.data)
+            this.bindEvents()
+            this.bindEventHub()
+            this.getAllSongs()
+        },
+        getAllSongs(){
+            this.model.find().then(()=>{
+                this.view.render(this.model.data)
+            })
+        },
+        bindEvents(){
+            $(this.view.el).on('click', 'li', (e)=>{
+                this.view.activeItem(e.currentTarget)
+            })
+        },
+        bindEventHub(){
             window.eventHub.on('upload', ()=>{
                 this.view.clearActive()
             })
             window.eventHub.on('create', (songData)=>{
                 this.model.data.songs.push(songData)
-                this.view.render(this.model.data)
-            })
-            this.model.find().then(()=>{
                 this.view.render(this.model.data)
             })
         }
