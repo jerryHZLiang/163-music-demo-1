@@ -155,7 +155,7 @@ body{
   .site-loading::before {
     content: '';
     display: block;
-    background: green;
+    background: rgb(22, 22, 22);
     position: absolute;
     width: 100px;
     height: 100px;

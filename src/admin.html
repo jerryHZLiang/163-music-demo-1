@@ -36,14 +36,19 @@
         </main>
     </div>
 
+    <div class="site-loading" id="siteLoading"></div>
+
     <script src="../vendors/jquery.min.js"></script>
     <script src="../vendors/av-min.js"></script>
     <script src="../vendors/qiniu.min.js"></script>
     <script src="../vendors/moxie.js"></script>
     <script src="../vendors/plupload.min.js"></script>
     <script src="./js/initializers/av.js"></script>
+    
 
     <script src="./js/eventHub.js"></script>
+    <!-- 注意 js顺序 否则loading.js会出现 can not read "on" property 的bug -->
+    <script src="./js/loading.js"></script>
     <script src="./js/song-form.js"></script>
     <script src="./js/new-song.js"></script>
     <script src="./js/song-list.js"></script>
