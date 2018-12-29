@@ -25,7 +25,7 @@ window.x = 'open'
                 uptoken_url: 'http://localhost:8888/uptoken', //Ajax请求upToken的Url，**强烈建议设置**（服务端提供）
                 // unique_names: true, // 默认 false，key为文件名。若开启该选项，SDK为自动生成上传成功后的key（文件名）。
                 // save_key: true,   // 默认 false。若在服务端生成uptoken的上传策略中指定了 `sava_key`，则开启，SDK会忽略对key的处理
-                domain: 'http://pgyi7d1x7.bkt.clouddn.com/', //bucket 域名，下载资源时用到，**必需**
+                domain: 'http://media.hezhenliang.top/', //bucket 域名，下载资源时用到，**必需**
                 //pgyi7d1x7.bkt.clouddn.com
                 get_new_uptoken: false, //设置上传文件的时候是否每次都重新获取新的token
                 max_file_size: '40mb', //最大文件体积限制

@@ -1,4 +1,4 @@
-*{margin:0; padding: 0; box-sizing: border-box;}
+*{margin:0; padding: 0; box-sizing: border-box;font-family: 'PingFang SC', 'Microsoft Yahei';}
 *::before, *::after{box-sizing: border-box; }
 
 @keyframes circle{
@@ -9,10 +9,25 @@
     transform: rotate(360deg); 
   } 
 }
+/* html,body{overflow-y:hidden;} */
 
-.page{display: flex; flex-direction: column; height: 100vh;
-	background: transparent url(http://p3.music.126.net/z4p2xss2a50qNHe6TLFdoA==/2425522650910827.jpg) no-repeat center;
+h1 {
+	font-weight: 700;
+	font-size: 2em;
+	align-items: center;
+    color: #fff!important;
+}
+.page{
+	display: flex; flex-direction: column; 
+	/* background: transparent url(http://p3.music.126.net/z4p2xss2a50qNHe6TLFdoA==/2425522650910827.jpg) no-repeat center; */
 	background-size: cover;
+	height: 100%; 
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
 
 .disc-container{position: relative; }
@@ -27,11 +42,11 @@
 	border-radius: 50%; background: rgba(0,0,0,0.5);
 }
 .disc-container .icon {width: 10vw; fill: white;}
-.disc-container .pointer{width: 24vw; position: absolute; left: 45vw; }
-.disc-container .disc{display: flex; justify-content: center; align-items: center; margin-top: 18vw; }
-.disc-container .ring{width: 72vw; } 
-.disc-container .light{width: 72vw; position: absolute; }
-.disc-container .cover{width: 44.5vw; position: absolute; border-radius: 50%;  
+.disc-container .pointer{width: 10vw; position: absolute; left: 50vw; }
+.disc-container .disc{display: flex; justify-content: center; align-items: center; margin-top: 5vw; }
+.disc-container .ring{width: 45vw; } 
+.disc-container .light{width: 45vw; position: absolute; }
+.disc-container .cover{width: 23vw; position: absolute; border-radius: 50%;  
   animation: circle 20s infinite linear; 
   animation-play-state: paused;
 }
@@ -77,12 +92,12 @@
 	color: #D43B32;
 }
 .page > .links > a{
-	width: 38.5vw;
+	width: 26vw;
 	margin: 1em;
 	text-align: center;
 	border: 1px solid #D43B32;
 	background: transparent;
-	padding: 1.5vw;
+	padding: 1vw;
 	color: inherit;
 	text-decoration: none;
 	border-radius: 1.3vw;

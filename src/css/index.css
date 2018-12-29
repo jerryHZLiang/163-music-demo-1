@@ -1,7 +1,7 @@
 /* red: #D43C33 */
 /* grey: #888 */
 *{margin:0;padding:0;}
-*{box-sizing: border-box;}
+*{box-sizing: border-box;font-family: 'PingFang SC', 'Microsoft Yahei';}
 *::after{box-sizing: border-box;}
 *::before{box-sizing: border-box;}
 
@@ -34,6 +34,10 @@ body{
   width: 100%;
   z-index: 1;
   background: white;
+}
+.cover img {
+  height: 420px;
+  width: 420px;
 }
 section.topbar{
   display: flex;
@@ -88,8 +92,7 @@ section.topbar > a::after{
 .tabs-nav >li.active{
   color: #D43C33;
 }
-.tabs-nav >li.active>.text{ 
-}
+
 .tabs-nav >li.active>.text::after{
   content: '';
   position: absolute;
@@ -117,8 +120,7 @@ section.topbar > a::after{
   display: table;
 }
 
-section.playlists{
-}
+
 section.playlists > ol.songs{
   display: flex;
   flex-wrap: wrap;
@@ -141,7 +143,7 @@ section.playlists > ol.songs > li p{
 section.playlists > ol.songs > li img{
   width: 100%;
 }
-section.songs{}
+
 section.songs > .list {
   margin-top: 18px;
 }
